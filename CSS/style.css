@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(to bottom,lightpink, orange);
+}
+
+form {
+    width: 500px;
+    padding: 20px;
+    margin: 106px 390px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.name-container,
+.birthday-gender-container,
+.email-phonenum-container {
+    display: flex;
+    gap: 10px;
+}
+
+.input-container {
+    width: 250px;
+    padding: 10px 0px;
+}
+
+.subject-container {
+    padding: 10px 0px;
+}
+
+.submit-container {
+    width: 70%;
+    padding: 10px 0px;
+}
+
+.dropdown-container {
+    height: 30px;
+    width: 96%;
+    border-radius: 4px;
+}
+
+.font {
+    font-weight: bold;
+}
+
+.size {
+    height: 24px;
+    width: 220px;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: orange;
+    text-transform: uppercase;
+    width: 80px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 4px
+}

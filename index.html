@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
+    <form action="" id="form">
+      <h1>Registration Form</h1>
+      <h2></h2>
+      <div class="name-container">
+        <div class="input-container">
+          <input
+            type="text"
+            class="size"
+            name="First Name"
+            id="firstName"
+            placeholder="First Name"
+          />
+          <span style="color: red" id="name_error"></span>
+        </div>
+        <div class="input-container">
+          <input
+            type="text"
+            class="size"
+            name="Last Name"
+            id="lastName"
+            placeholder="Last Name"
+          />
+          <span style="color: red" id="name_error2"></span>
+        </div>
+      </div>
+      <div class="birthday-gender-container">
+        <div class="input-container">
+          <input type="date" class="size" name="Date" id="date" required />
+        </div>
+        <div class="input-container">
+          <label class="font">Gender:</label> <br />
+          <br />
+          Male <input type="radio" name="Gender" id="gender" /> Female
+          <input type="radio" name="Gender" id="gender" /> Other
+          <input type="radio" name="Gender" id="gender" />
+          <span style="color: red" id="gender_error"></span>
+        </div>
+      </div>
+      <div class="email-phonenum-container">
+        <div class="input-container">
+          <input
+            type="email"
+            class="size"
+            name="Email"
+            id="email"
+            placeholder="Email"
+          />
+          <span style="color: red" id="email_error"></span>
+        </div>
+        <div class="input-container">
+          <input
+            type="tel"
+            class="size"
+            name="Phone Number"
+            id="phoneNumber"
+            placeholder="Phone Number"
+          />
+          <span style="color: red" id="phoneNumber_error"></span>
+        </div>
+      </div>
+      <div>
+        <div class="input-container">
+          <label class="font">Subject</label>
+        </div>
+        <div class="subject-container">
+          <select class="dropdown-container" name="Subject" id="subject">
+            <option value="">Choose option</option>
+            <option value="Artificial Intelligence">
+              Artificial Intelligence
+            </option>
+            <option value="Data Science">Data Science</option>
+            <option value="Data Structures">Data Structures</option>
+          </select>
+        </div>
+      </div>
+      <div class="submit-container">
+        <input type="submit" value="Submit" class="button" />
+      </div>
+    </form>
+
+    <!-- <script>
+        
+const form = document.getElementById('r-form');
+
+form.addEventListener('submit', function (event) {
+event.preventDefault();
+
+const firstName = document.getElementById('First Name').value.trim();
+const lastName = document.getElementById('Last Name').value.trim();
+const date = document.getElementById('Date').value.trim();
+const gender = document.querySelector('input[name="Gender"]:checked');
+const email = document.getElementById('Email').value.trim();
+const phone = document.getElementById('Phone Number').value.trim();
+const subject = document.getElementById('Subject').value.trim();
+
+if (firstName === '' || lastName === '' || date === '' || !gender || email === '' || phone === '' || subject === '') {
+alert('Please fill out all fields.');
+return;
+}
+
+// Email validation
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+alert('Please enter a valid email address.');
+return;
+}
+
+// Phone number validation
+const phoneRegex = /^\d{10}$/;
+if (!phoneRegex.test(phone)) {
+alert('Please enter a valid 10-digit phone number.');
+return;
+}
+
+// If all fields and validations pass, you can submit the form:
+form.submit();
+});
+
+
+    </script> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<?php
+// var_dump($_SERVER["REQUEST_METHOD"]);
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+  $firstname =  htmlspecialchars($_POST["firstname"]);
+   $lastname =  htmlspecialchars($_POST["lastname"]);
+   $color =  htmlspecialchars($_POST["favouritecolor"]);
+
+  echo "The user submitted the below data";
+  echo"<br>"; echo $firstname; echo"<br />"; echo $lastname; echo"<br />"; echo
+$color; }
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML 5 Boilerplate</title>
+  </head>
+  <body>
+    <main>
+      <form action="includes/formhandler.php" method="post">
+        <label for="firstname">firstname : </label>
+        <input type="text" name="firstname" id="firstname" />
+        <br /><br />
+
+        <label for="lastname">lastname : </label>
+        <input
+          type="lastname"
+          name="lastname"
+          id="lastname"
+          placeholder="eg : thammisetti"
+        />
+        <br /><br />
+
+        <label for="favcolor">Favourite color : </label>
+        <select name="favouritecolor" id="favcolor">
+          <option value="">--none--</option>
+          <option value="green">green</option>
+          <option value="blue">blue</option>
+          <option value="black">black</option>
+        </select>
+        <br /><br />
+
+        <button type="submit">send data</button>
+      </form>
+    </main>
+  </body>
+</html>
